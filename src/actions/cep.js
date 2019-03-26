@@ -1,4 +1,5 @@
 import * as API from "../utils/api";
+import handleReceiveLocation from "./location";
 
 export const RECEIVE_CEP = "RECEIVE_CEP";
 
@@ -14,7 +15,8 @@ function receiveCEPInfo(info) {
 function handleReceiveCEPInfo(cep) {
   return async dispatch => {
     const info = await API.getInfoCEP(cep);
-    return dispatch(receiveCEPInfo(info));
+    dispatch(receiveCEPInfo(info));
+    return dispatch(handleReceiveLocation(info));
   };
 }
 

@@ -1,12 +1,15 @@
 import { RECEIVE_LOCATION } from "../actions/location";
 
-const loading = (state = true, action) => {
+const location = (state = {}, action) => {
   switch (action.type) {
     case RECEIVE_LOCATION:
-      return false;
+      return {
+        ...state,
+        ...action.payload
+      };
     default:
       return state;
   }
 };
 
-export default loading;
+export default location;

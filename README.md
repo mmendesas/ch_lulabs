@@ -23,3 +23,8 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 Builds the app for production to the `build` folder.<br>
 It correctly bundles React in production mode and optimizes the build for the best performance.
+
+### Resources | Built with
+
+- [Maps Javascript API](https://developers.google.com/maps/documentation/javascript/tutorial) - lets you customize maps with your own content and imagery
+- [Google Map React](https://www.npmjs.com/package/google-map-react) - render any React component on the Google Map.
