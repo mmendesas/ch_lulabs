@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 
 import handleReceiveCEPInfo from "../actions/cep";
-import Map from "./Map";
+
+import Search from "./Search";
 class App extends Component {
   componentDidMount() {
     // this.props.fetchCEP("06328080");
@@ -15,9 +16,8 @@ class App extends Component {
 
     return (
       <div>
-        <h1>First Commit</h1>
-        <pre>{JSON.stringify(this.props, null, 2)}</pre>
-        <Map />
+        <h1 className="homepage__title">Consulta de Endereço</h1>
+        <Search />
       </div>
     );
   }
