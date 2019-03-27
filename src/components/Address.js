@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const Address = ({ logradouro, bairro, localidade, uf, cep }) => (
   <section className="address">

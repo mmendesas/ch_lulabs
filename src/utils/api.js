@@ -1,10 +1,10 @@
-import fetchJsonp from "fetch-jsonp";
+import fetchJsonp from 'fetch-jsonp';
 
-const CEP_URL = "https://viacep.com.br/ws";
-const API_URL = "https://maps.googleapis.com/maps/api/geocode/json";
-export const API_KEY = "AIzaSyBcAqRGOwKrY4l-yrUi1CNu7k6F2fDF8U0";
+const CEP_URL = 'https://viacep.com.br/ws';
+const API_URL = 'https://maps.googleapis.com/maps/api/geocode/json';
+export const API_KEY = 'AIzaSyBcAqRGOwKrY4l-yrUi1CNu7k6F2fDF8U0';
 
-export function getInfoCEP(cep = "") {
+export function getInfoCEP(cep = '') {
   return fetchJsonp(`${CEP_URL}/${cep}/json/?callback=myfn`)
     .then(res => res.json())
     .then(json => {
@@ -12,7 +12,7 @@ export function getInfoCEP(cep = "") {
       return { cep, logradouro, bairro, localidade, uf };
     })
     .catch(ex => {
-      throw new Error("Error getting ViaCEP data", ex);
+      throw new Error('Error getting ViaCEP data', ex);
     });
 }
 
@@ -22,13 +22,13 @@ export function getGeoLocation(params) {
     .then(res => res.json())
     .then(json => {
       const location =
-        json.status === "OK"
+        json.status === 'OK'
           ? json.results[0].geometry.location
           : { lat: 0, lng: 0 };
       return location;
     })
     .catch(ex => {
-      throw new Error("Error getting GoogleMaps API data", ex);
+      throw new Error('Error getting GoogleMaps API data', ex);
     });
 }
 
@@ -47,9 +47,9 @@ export async function getLocationInfo(cep) {
 function queryParams(params) {
   return Object.keys(params)
     .map(k => `${encodeURIComponent(k)}=${encodeURIComponent(params[k])}`)
-    .join("&");
+    .join('&');
 }
 
 function buildUrl(url, params) {
-  return (url += (url.indexOf("?") === -1 ? "?" : "&") + queryParams(params));
+  return (url += (url.indexOf('?') === -1 ? '?' : '&') + queryParams(params));
 }

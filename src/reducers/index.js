@@ -1,6 +1,6 @@
-import { combineReducers } from "redux";
+import { combineReducers } from 'redux';
 
-import cep from "./cep";
+import cep from './cep';
 
 export default combineReducers({
   info: cep

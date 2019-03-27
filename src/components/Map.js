@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import { Map, GoogleApiWrapper, Marker, InfoWindow } from "google-maps-react";
-import { API_KEY } from "../utils/api";
+import React, { Component } from 'react';
+import { Map, GoogleApiWrapper, Marker, InfoWindow } from 'google-maps-react';
+import { API_KEY } from '../utils/api';
 
 const mapStyles = {
-  width: "100%",
-  height: "100%"
+  width: '100%',
+  height: '100%'
 };
 
 class MapContainer extends Component {

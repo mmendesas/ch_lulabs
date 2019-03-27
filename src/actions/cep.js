@@ -1,7 +1,7 @@
-import * as API from "../utils/api";
+import * as API from '../utils/api';
 
-export const REQUEST_CEP = "REQUEST_CEP";
-export const RECEIVE_CEP = "RECEIVE_CEP";
+export const REQUEST_CEP = 'REQUEST_CEP';
+export const RECEIVE_CEP = 'RECEIVE_CEP';
 
 // action creators
 function requestCEP(cep) {

@@ -1,12 +1,12 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-import fetchCEP from "../actions/cep";
+import fetchCEP from '../actions/cep';
 
-import Search from "./Search";
-import Dialog from "./Dialog";
-import Address from "./Address";
-import Map from "./Map";
+import Search from './Search';
+import Dialog from './Dialog';
+import Address from './Address';
+import Map from './Map';
 class App extends Component {
   state = {
     showDialog: true

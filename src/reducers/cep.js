@@ -1,4 +1,4 @@
-import { REQUEST_CEP, RECEIVE_CEP } from "../actions/cep";
+import { REQUEST_CEP, RECEIVE_CEP } from '../actions/cep';
 
 const cep = (
   state = {

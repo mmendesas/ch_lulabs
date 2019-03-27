@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 class Search extends Component {
   state = {
-    cep: ""
+    cep: ''
   };
 
   handleChange = event => {
@@ -13,7 +13,7 @@ class Search extends Component {
   submitForm = e => {
     e.preventDefault();
     this.props.onSearch(this.state.cep);
-    this.setState(() => ({ cep: "" }));
+    this.setState(() => ({ cep: '' }));
   };
 
   render() {
