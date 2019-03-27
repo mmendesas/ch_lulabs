@@ -1,0 +1,39 @@
+.search {
+  background-color: $lightgrey;
+  padding: 3rem;
+  margin: 2rem;
+
+  &__title {
+    color: $black;
+    font-size: 1.6rem;
+    margin: 0;
+    margin-bottom: 2rem;
+  }
+
+  &__label {
+    color: $grey;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-right: 1rem;
+  }
+
+  &__text {
+    border: 0.2rem solid #e2e2e2;
+    border-radius: 5px;
+    color: $grey;
+    font-size: 1.6rem;
+    padding: 0.6rem;
+    margin: 0.5rem;
+  }
+
+  &__button {
+    color: $white;
+    background-color: $blue;
+    border: none;
+    border-radius: 0.3rem;
+    box-shadow: 0 0.2rem 0.3rem 0 rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    font-size: 1.6rem;
+    padding: 0.6rem 1.6rem;
+  }
+}

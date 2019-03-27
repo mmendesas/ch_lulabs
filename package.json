@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "google-maps-react": "^2.0.2",
+    "node-sass": "^4.11.0",
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
     "react-redux": "^6.0.1",

@@ -1,0 +1,12 @@
+@charset 'UTF-8';
+
+// configuration and helpers
+@import "abstracts/variables";
+@import "abstracts/base";
+
+// vendors
+@import "vendors/normalize";
+
+// components
+@import "components/common";
+@import "components/search";
