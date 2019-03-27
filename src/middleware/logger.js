@@ -1,8 +1,8 @@
 const logger = store => next => action => {
   console.group(action.type);
-  console.log("The action: ", action);
+  console.log("%cThe action: ", "color: #1197E3", action);
   const result = next(action);
-  console.log("The new state: ", store.getState());
+  console.log("%cThe new state: ", "color: #bada55", store.getState());
   console.groupEnd();
 
   return result;
