@@ -1,46 +1,45 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import handleReceiveCEPInfo from "../actions/cep";
+import fetchCEP from "../actions/cep";
 
 import Search from "./Search";
 import Dialog from "./Dialog";
 import Address from "./Address";
 class App extends Component {
   state = {
-    showDialog: true,
-    address: {
-      cep: "02050-010",
-      logradouro: "Rua Miguel Mentem",
-      bairro: "Vila Guilherme",
-      localidade: "São Paulo",
-      uf: "SP"
-    }
+    showDialog: true
   };
 
-  componentDidMount() {
-    this.props.fetchCEP("06328080");
-  }
-
   onCloseClick = () => {
-    this.setState(() => ({ showDialog: !this.state.showDialog }));
+    this.setState(() => ({ showDialog: false }));
+  };
+
+  onSearch = cep => {
+    this.props.fetchCEP(cep);
+    this.setState(() => ({ showDialog: true }));
   };
 
   render() {
-    // if (this.props.loading) {
-    //   return <h1>Loading...</h1>;
-    // }
-
-    const { showDialog, address } = this.state;
+    const {
+      info: { isFetching, address }
+    } = this.props;
 
     return (
       <div>
         <h1 className="homepage__title">Consulta de Endereço</h1>
-        <Search />
+        <Search onSearch={this.onSearch} />
 
-        <Dialog visible={showDialog} onCloseClick={this.onCloseClick}>
-          <Address {...address} />
-        </Dialog>
+        {isFetching && <h1>Loading...</h1>}
+
+        {!isFetching && address.cep && (
+          <Dialog
+            visible={this.state.showDialog}
+            onCloseClick={this.onCloseClick}
+          >
+            <Address {...address} />
+          </Dialog>
+        )}
       </div>
     );
   }
@@ -51,7 +50,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchCEP: cep => dispatch(handleReceiveCEPInfo(cep))
+  fetchCEP: cep => dispatch(fetchCEP(cep))
 });
 
 export default connect(

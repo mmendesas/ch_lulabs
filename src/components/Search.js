@@ -12,8 +12,7 @@ class Search extends Component {
 
   submitForm = e => {
     e.preventDefault();
-    const { cep } = this.state;
-    console.log(cep);
+    this.props.onSearch(this.state.cep);
     this.setState(() => ({ cep: "" }));
   };
 

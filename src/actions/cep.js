@@ -1,10 +1,17 @@
 import * as API from "../utils/api";
-import handleReceiveLocation from "./location";
 
+export const REQUEST_CEP = "REQUEST_CEP";
 export const RECEIVE_CEP = "RECEIVE_CEP";
 
 // action creators
-function receiveCEPInfo(info) {
+function requestCEP(cep) {
+  return {
+    type: REQUEST_CEP,
+    cep
+  };
+}
+
+function receiveCEP(info) {
   return {
     type: RECEIVE_CEP,
     payload: info
@@ -12,12 +19,14 @@ function receiveCEPInfo(info) {
 }
 
 // async action creators
-function handleReceiveCEPInfo(cep) {
+function fetchCEP(cep) {
   return async dispatch => {
-    const info = await API.getInfoCEP(cep);
-    dispatch(receiveCEPInfo(info));
-    return dispatch(handleReceiveLocation(info));
+    dispatch(requestCEP(cep));
+
+    API.getLocationInfo(cep).then(info => {
+      return dispatch(receiveCEP(info));
+    });
   };
 }
 
-export default handleReceiveCEPInfo;
+export default fetchCEP;
