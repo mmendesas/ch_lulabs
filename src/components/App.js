@@ -19,7 +19,7 @@ class App extends Component {
   };
 
   componentDidMount() {
-    // this.props.fetchCEP("06328080");
+    this.props.fetchCEP("06328080");
   }
 
   onCloseClick = () => {
