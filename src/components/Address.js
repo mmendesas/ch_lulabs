@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Address = ({ logradouro, bairro, localidade, uf, cep }) => (
+const Address = ({ logradouro = 'address', bairro, localidade, uf, cep }) => (
   <section className="address">
     <h1 className="address__title">{logradouro}</h1>
     <div className="address__item">{bairro}</div>
