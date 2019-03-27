@@ -5,9 +5,17 @@ import handleReceiveCEPInfo from "../actions/cep";
 
 import Search from "./Search";
 import Dialog from "./Dialog";
+import Address from "./Address";
 class App extends Component {
   state = {
-    showDialog: true
+    showDialog: true,
+    address: {
+      cep: "02050-010",
+      logradouro: "Rua Miguel Mentem",
+      bairro: "Vila Guilherme",
+      localidade: "São Paulo",
+      uf: "SP"
+    }
   };
 
   componentDidMount() {
@@ -23,7 +31,7 @@ class App extends Component {
     //   return <h1>Loading...</h1>;
     // }
 
-    const { showDialog } = this.state;
+    const { showDialog, address } = this.state;
 
     return (
       <div>
@@ -31,7 +39,7 @@ class App extends Component {
         <Search />
 
         <Dialog visible={showDialog} onCloseClick={this.onCloseClick}>
-          <h1>First test</h1>
+          <Address {...address} />
         </Dialog>
       </div>
     );
