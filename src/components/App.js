@@ -6,6 +6,7 @@ import fetchCEP from "../actions/cep";
 import Search from "./Search";
 import Dialog from "./Dialog";
 import Address from "./Address";
+import Map from "./Map";
 class App extends Component {
   state = {
     showDialog: true
@@ -38,6 +39,7 @@ class App extends Component {
             onCloseClick={this.onCloseClick}
           >
             <Address {...address} />
+            <Map {...address} />
           </Dialog>
         )}
       </div>

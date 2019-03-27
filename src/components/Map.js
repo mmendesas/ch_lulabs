@@ -3,8 +3,8 @@ import { Map, GoogleApiWrapper, Marker, InfoWindow } from "google-maps-react";
 import { API_KEY } from "../utils/api";
 
 const mapStyles = {
-  width: "100vw",
-  height: "100vh"
+  width: "100%",
+  height: "100%"
 };
 
 class MapContainer extends Component {
@@ -33,28 +33,30 @@ class MapContainer extends Component {
   render() {
     const { showMarker, google } = this.props;
     return (
-      <Map
-        google={google}
-        zoom={4}
-        style={mapStyles}
-        initialCenter={{
-          lat: -12.765219,
-          lng: -52.079634
-        }}
-      >
-        {showMarker && (
-          <Marker onClick={this.onMarkerClick} name={"Marker Test"} />
-        )}
-        <InfoWindow
-          marker={this.state.activeMarker}
-          visible={this.state.showingInfoWindow}
-          onClose={this.onClose}
+      <div className="map">
+        <Map
+          google={google}
+          zoom={4}
+          style={mapStyles}
+          initialCenter={{
+            lat: -12.765219,
+            lng: -52.079634
+          }}
         >
-          <div>
-            <h4>{this.state.selectedPlace.name}</h4>
-          </div>
-        </InfoWindow>
-      </Map>
+          {showMarker && (
+            <Marker onClick={this.onMarkerClick} name={"Marker Test"} />
+          )}
+          <InfoWindow
+            marker={this.state.activeMarker}
+            visible={this.state.showingInfoWindow}
+            onClose={this.onClose}
+          >
+            <div>
+              <h4>{this.state.selectedPlace.name}</h4>
+            </div>
+          </InfoWindow>
+        </Map>
+      </div>
     );
   }
 }
