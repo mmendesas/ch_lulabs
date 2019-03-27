@@ -1,0 +1,26 @@
+.dialog {
+  padding: 2rem;
+  border: 0.2rem solid #e2e2e2;
+  border-radius: 5px;
+  position: relative;
+  display: none;
+  margin: 2rem;
+
+  &--active {
+    display: block;
+  }
+}
+
+.close-thik {
+  color: #777;
+  font: 2.3rem arial, sans-serif;
+  position: absolute;
+  right: 5px;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #fff;
+  top: 5px;
+
+  &::after {
+    content: "✖"; /* UTF-8 symbol */
+  }
+}
