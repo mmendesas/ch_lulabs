@@ -27,4 +27,4 @@ It correctly bundles React in production mode and optimizes the build for the be
 ### Resources | Built with
 
 - [Maps Javascript API](https://developers.google.com/maps/documentation/javascript/tutorial) - lets you customize maps with your own content and imagery
-- [Google Map React](https://www.npmjs.com/package/google-map-react) - render any React component on the Google Map.
+- [Google Maps React](https://www.npmjs.com/package/google-maps-react) - render any React component on the Google Map.

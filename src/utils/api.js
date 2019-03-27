@@ -1,6 +1,6 @@
 const URL_CEP = "https://viacep.com.br/ws";
-const API_KEY = "AIzaSyBcAqRGOwKrY4l-yrUi1CNu7k6F2fDF8U0";
 const API_URL = "https://maps.googleapis.com/maps/api/geocode/json";
+export const API_KEY = "AIzaSyBcAqRGOwKrY4l-yrUi1CNu7k6F2fDF8U0";
 
 export function getInfoCEP(cep) {
   return fetch(`${URL_CEP}/${cep}/json`)
