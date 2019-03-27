@@ -11,7 +11,12 @@ class MapContainer extends Component {
   state = {
     showingInfoWindow: false,
     activeMarker: {},
-    selectedPlace: {}
+    selectedPlace: {},
+    initialCenter: {
+      lat: -12.765219,
+      lng: -52.079634
+    },
+    initialZoom: 4
   };
 
   onMarkerClick = (props, marker, e) =>
@@ -31,20 +36,19 @@ class MapContainer extends Component {
   };
 
   render() {
-    const { showMarker, google } = this.props;
+    const { initialZoom, initialCenter } = this.state;
+    const { showMarker, google, lat, lng, logradouro } = this.props;
+
     return (
       <div className="map">
         <Map
           google={google}
-          zoom={4}
+          zoom={showMarker ? 15 : initialZoom}
           style={mapStyles}
-          initialCenter={{
-            lat: -12.765219,
-            lng: -52.079634
-          }}
+          initialCenter={showMarker ? { lat, lng } : initialCenter}
         >
           {showMarker && (
-            <Marker onClick={this.onMarkerClick} name={"Marker Test"} />
+            <Marker onClick={this.onMarkerClick} name={logradouro} />
           )}
           <InfoWindow
             marker={this.state.activeMarker}

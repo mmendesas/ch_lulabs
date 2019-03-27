@@ -39,7 +39,7 @@ class App extends Component {
             onCloseClick={this.onCloseClick}
           >
             <Address {...address} />
-            <Map {...address} />
+            <Map showMarker {...address} />
           </Dialog>
         )}
       </div>
