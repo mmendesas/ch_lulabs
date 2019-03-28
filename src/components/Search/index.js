@@ -7,7 +7,8 @@ class Search extends Component {
 
   handleChange = event => {
     const { name, value } = event.target;
-    this.setState(() => ({ [name]: value }));
+    const numbers = value.replace(/[^0-9]/g, '');
+    this.setState(() => ({ [name]: numbers }));
   };
 
   submitForm = e => {
@@ -26,6 +27,7 @@ class Search extends Component {
             type="text"
             placeholder="02050-010"
             name="cep"
+            aria-label="search"
             className="search__text"
             value={this.state.cep}
             onChange={this.handleChange}

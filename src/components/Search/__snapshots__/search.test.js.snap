@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[Component] - Search should be match snapshot 1`] = `
+<h2
+  class="search__title"
+>
+  Consultar
+</h2>
+`;
