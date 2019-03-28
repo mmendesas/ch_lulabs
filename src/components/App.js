@@ -23,17 +23,22 @@ class App extends Component {
 
   render() {
     const {
-      info: { isFetching, address }
+      info: { isFetching, address },
+      error
     } = this.props;
+
+    const hasErrors = error && error.message !== '';
 
     return (
       <div>
         <h1 className="homepage__title">Consulta de Endereço</h1>
         <Search onSearch={this.onSearch} />
 
+        {hasErrors && <h1 className="error-message">{error.message}</h1>}
+
         {isFetching && <h1 className="loading">Loading...</h1>}
 
-        {!isFetching && address.cep && (
+        {!hasErrors && !isFetching && address.cep && (
           <Dialog
             visible={this.state.showDialog}
             onCloseClick={this.onCloseClick}

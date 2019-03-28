@@ -1,4 +1,4 @@
-import { REQUEST_CEP, RECEIVE_CEP } from '../actions/cep';
+import { REQUEST_CEP, RECEIVE_CEP, ADD_ERROR } from '../actions/cep';
 
 const cep = (
   state = {
@@ -18,6 +18,11 @@ const cep = (
         ...state,
         isFetching: false,
         address: action.payload
+      };
+    case ADD_ERROR:
+      return {
+        ...state,
+        isFetching: false
       };
     default:
       return state;
