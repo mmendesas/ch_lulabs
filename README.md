@@ -25,7 +25,21 @@ To see a working live sample, access: [ch_lulabs website](https://mmendesas.gith
 
 #### E2E Tests
 
-- TODO
+- We decided to use the [**walnutjs**](https://github.com/mmendesas/walnutjs) framework to write the end-to-end tests, the following steps will help you run those tests:
+
+1. Using the web interactions (easily to see what happens during execution)
+   - Before execution, you need to intall `protractor` and start `webdriver-manager`:
+   ```sh
+    npm install -g protractor
+    webdriver-manager update
+    webdriver-manager start
+   ```
+   - Run the tests
+   ```sh
+     yarn run test:e2e
+   ```
+2. It's possible to run this using a **dockerized** structure:
+   - See [this docs](https://github.com/andresakai/docker-protractor) to see more details
 
 ## Deployment
 

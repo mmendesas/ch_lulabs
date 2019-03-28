@@ -23,6 +23,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:e2e": "protractor protractor.conf.js",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
