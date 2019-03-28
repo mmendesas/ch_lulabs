@@ -1,0 +1,29 @@
+{
+  "containers": [
+    {
+      "name": "ConsultaCEP",
+      "locators": [
+        {
+          "key": "SearchInput",
+          "type": "xpath",
+          "value": "//input[@name='cep']"
+        },
+        {
+          "key": "SearchButton",
+          "type": "xpath",
+          "value": "//button[@class='search__button']"
+        },
+        {
+          "key": "AddressTitle",
+          "type": "xpath",
+          "value": "//*[@class='address__title']"
+        },
+        {
+          "key": "AddressZipCode",
+          "type": "xpath",
+          "value": "(//*[@class='address__item'])[3]"
+        }
+      ]
+    }
+  ]
+}
