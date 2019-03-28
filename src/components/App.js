@@ -31,7 +31,7 @@ class App extends Component {
         <h1 className="homepage__title">Consulta de Endereço</h1>
         <Search onSearch={this.onSearch} />
 
-        {isFetching && <h1>Loading...</h1>}
+        {isFetching && <h1 className="loading">Loading...</h1>}
 
         {!isFetching && address.cep && (
           <Dialog
