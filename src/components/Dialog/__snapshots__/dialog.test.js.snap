@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[Component] - Dialog should be match snapshot 1`] = `
+<section
+  class="dialog"
+>
+  <div
+    class="close-thik"
+  />
+  my dialog
+</section>
+`;

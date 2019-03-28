@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[Component] - Address should be match snapshot 1`] = `
+<h1
+  class="address__title"
+>
+  address
+</h1>
+`;

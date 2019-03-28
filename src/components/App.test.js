@@ -17,7 +17,9 @@ const renderWithRedux = (
   };
 };
 
-it('can render with redux with defaults', () => {
-  const { getByText } = renderWithRedux(<App />);
-  expect(getByText('Consulta de Endereço')).toBeInTheDocument();
+describe('[Container] - App', () => {
+  it('can render with redux with defaults', () => {
+    const { getByText } = renderWithRedux(<App />);
+    expect(getByText('Consulta de Endereço')).toBeInTheDocument();
+  });
 });
