@@ -4,7 +4,7 @@ Challenge for a FrontEnd position
 
 ## Getting Started
 
-This project was used as a way to evaluate the candidates' knowledge for the FrontEnd position
+This project was used as a way to evaluate the candidates' knowledge for the FrontEnd position @LuizaLabs
 
 ### Installing
 
@@ -51,6 +51,7 @@ To deploy this on a live system you can run this command `yarn run deploy` or fo
 - [Redux](https://redux.js.org/) - A predictable state container for JavaScript apps.
 - [Maps Javascript API](https://developers.google.com/maps/documentation/javascript/tutorial) - lets you customize maps with your own content and imagery
 - [React Testing Library](https://github.com/kentcdodds/react-testing-library) - React DOM testing utilities
+- [Walnutjs](https://github.com/mmendesas/walnutjs) - End-to-end test framework in BDD style
 
 ## Authors
 
