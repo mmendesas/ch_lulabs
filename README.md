@@ -1,30 +1,59 @@
-# Frontend Challenge @luizaLabs
+# Address Query by ZipCode (Consulta de Endereço)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Challenge for a FrontEnd position
 
-## Available Scripts
+## Getting Started
 
-In the project directory, you can run:
+This project was used as a way to evaluate the candidates' knowledge for the FrontEnd position
 
-### `npm start`
+### Installing
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Follow the next steps to have the development env running
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+1. Clone this repo from github: `https://github.com/mmendesas/ch_lulabs.git`
+2. Install the dependencies: `yarn` or `npm install`
+3. Run the project: `yarn start` or `npm start`
+4. Access the `http://localhost:3000` to see the result
 
-### `npm test`
+To see a working live sample, access: [ch_lulabs website](https://mmendesas.github.io/ch_lulabs/)
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Running the tests
 
-### `npm run build`
+#### Unit Tests
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- From the **root** folder, run this command: `yarn test` or `npm test`
 
-### Resources | Built with
+#### E2E Tests
+
+- TODO
+
+## Deployment
+
+To deploy this on a live system you can run this command `yarn run deploy` or following the options in this [Deployment Doc](https://facebook.github.io/create-react-app/docs/deployment)
+
+## Built With
+
+- [React](https://reactjs.org/) - Javascript Library for building user interfaces
+- [Redux](https://redux.js.org/) - A predictable state container for JavaScript apps.
+- [Maps Javascript API](https://developers.google.com/maps/documentation/javascript/tutorial) - lets you customize maps with your own content and imagery
+- [React Testing Library](https://github.com/kentcdodds/react-testing-library) - React DOM testing utilities
+
+## Authors
+
+- **Marcio Mendes** - _Initial work_ - [mmendesas](https://github.com/mmendesas)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Tips and Tricks
+
+- After entering and search for a zip code (CEP), try clicking on the map marker to see details
+- Use Ctrl + Scroll to control the zoom within the map view
+
+### Resources used during this challenge
 
 - [Maps Javascript API](https://developers.google.com/maps/documentation/javascript/tutorial) - lets you customize maps with your own content and imagery
 - [Google Maps React](https://www.npmjs.com/package/google-maps-react) - render any React component on the Google Map.
+- [Deployment Doc](https://github.com/mmendesas/ch_lulabs) - Deployment Create React App
+- [React Testing Library](https://github.com/kentcdodds/react-testing-library) - React DOM testing utilities
