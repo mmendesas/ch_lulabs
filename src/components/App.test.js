@@ -22,4 +22,23 @@ describe('[Container] - App', () => {
     const { getByText } = renderWithRedux(<App />);
     expect(getByText('Consulta de Endereço')).toBeInTheDocument();
   });
+
+  it('should show loading message when isFetching', () => {
+    const store = createStore(() => ({ info: { isFetching: true } }));
+    const { getByText } = renderWithRedux(<App />, {
+      store
+    });
+    expect(getByText('Loading...')).toBeInTheDocument();
+  });
+
+  it('should show dialog when have address data', () => {
+    const address = {
+      cep: '79065-260'
+    };
+    const store = createStore(() => ({ info: { address } }));
+    const { container } = renderWithRedux(<App />, {
+      store
+    });
+    expect(container.querySelector('.dialog--active')).toBeInTheDocument();
+  });
 });
